@@ -151,12 +151,22 @@ import Layout from "../layouts/Layout.astro";
   }
 
   @media screen and (max-width: 600px) {
+    .full {
+      justify-content: center;
+      align-items: stretch;
+    }
+
     .jumpbox {
       font-size: 1rem;
+      transform: none;
     }
 
     h1 {
       font-size: 2rem;
+    }
+
+    .hire-me {
+      z-index: 200;
     }
   }
 </style>

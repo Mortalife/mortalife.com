@@ -1,0 +1,151 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<script>
+  const now = new Date();
+  const then = new Date(2008, 6, 13);
+
+  const years = Math.floor(
+    (now.valueOf() - then.valueOf()) / (1000 * 60 * 60 * 24 * 365)
+  );
+  const element = document.getElementById("years");
+
+  if (element) {
+    element.innerHTML = years.toString();
+  }
+</script>
+
+<Layout title="Welcome to Astro.">
+  <main class="full background-1">
+    <div class="jumpbox text-gradient">
+      <h1 class="">...mortalife?</h1>
+    </div>
+    <p class="jumpbox text-gradient-2">
+      I get it, it's a strange domain for a personal email account.
+    </p>
+    <p class="jumpbox text-gradient-3">
+      All I can say is it made sense <span id="years">some</span> years ago. &#129335;
+    </p>
+    <a
+      href="https://www.linkedin.com/in/matthew-peck-developer/"
+      class="hire-me">Hire me</a
+    >
+    <img class="logo" src="/favicon.svg" alt="logo" />
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: grid;
+  }
+  .logo {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate3d(22, 180, 180, 25deg) scaleZ(20%);
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 20rem);
+    height: calc(100% - 20rem);
+    z-index: 1;
+    opacity: 0.2;
+    mix-blend-mode: difference;
+  }
+  .full {
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .hire-me {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 1rem;
+    text-decoration: none;
+    text-emphasis: none;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .hire-me:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  #years {
+    font-size: larger;
+  }
+  h1 {
+    font-size: 4rem;
+    line-height: 0.4;
+    text-align: center;
+    border-bottom: 2rem solid var(--tyrian-purple);
+    margin: 0px;
+  }
+  .jumpbox {
+    z-index: 100;
+    padding: 2rem;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+  }
+
+  .text-gradient {
+    background-image: linear-gradient(
+      90deg,
+      var(--carmine),
+      var(--spanish-orange) 100%
+    );
+    transform: rotate3d(22, 180, 200, 20deg);
+    color: var(--ut-orange);
+  }
+  .text-gradient {
+    background-image: linear-gradient(
+      90deg,
+      var(--carmine),
+      var(--spanish-orange) 100%
+    );
+    transform: rotate3d(22, 180, 180, 5deg);
+  }
+  .text-gradient-2 {
+    background-image: linear-gradient(
+      90deg,
+      var(--tyrian-purple),
+      var(--midnight-green) 100%
+    );
+    transform: rotate3d(22, 180, 50, -15deg);
+    color: beige;
+  }
+  .text-gradient-3 {
+    background-image: linear-gradient(
+      90deg,
+      var(--spanish-orange),
+      var(--ut-orange) 100%
+    );
+    transform: rotate3d(120, 60, 0, -20deg);
+    color: maroon;
+  }
+
+  .background-1 {
+    background: linear-gradient(
+        10deg,
+        var(--tyrian-purple),
+        rgba(95, 15, 64, 0) 70%
+      ),
+      linear-gradient(140deg, var(--midnight-green), rgba(15, 76, 92, 0) 70%),
+      linear-gradient(220deg, var(--ut-orange), rgba(251, 139, 36, 0) 70%),
+      linear-gradient(300deg, var(--spanish-orange), rgba(227, 100, 20, 0) 70%);
+  }
+</style>

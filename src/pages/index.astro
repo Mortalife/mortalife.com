@@ -30,7 +30,20 @@ import Layout from "../layouts/Layout.astro";
     </p>
     <a
       href="https://www.linkedin.com/in/matthew-peck-developer/"
-      class="hire-me">Hire me</a
+      class="hire-me"
+      >Hire me <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="25"
+        height="25"
+        viewBox="0 0 50 50"
+        fill="currentColor"
+      >
+        <path
+          d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"
+        ></path>
+      </svg></a
     >
     <img class="logo" src="/favicon.svg" alt="logo" />
   </main>
@@ -45,8 +58,8 @@ import Layout from "../layouts/Layout.astro";
     transform: translate(-50%, -50%) rotate3d(22, 180, 180, 25deg) scaleZ(20%);
     top: 50%;
     left: 50%;
-    width: calc(100% - 20rem);
-    height: calc(100% - 20rem);
+    width: calc(100% - 40rem);
+    height: calc(100% - 40rem);
     z-index: 1;
     opacity: 0.2;
     mix-blend-mode: difference;
@@ -81,6 +94,17 @@ import Layout from "../layouts/Layout.astro";
     text-emphasis: none;
     border-radius: 1rem;
     background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hire-me svg {
+    color: #fff;
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: #fff 2px solid;
   }
   .hire-me:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
